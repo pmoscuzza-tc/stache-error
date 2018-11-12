@@ -1,0 +1,51 @@
+{
+  "name": "stache-error",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "can": "^2.3.35",
+    "steal": "^1.5.13",
+    "steal-stache": "^3.1.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-steal": "~1.0.0",
+    "jquery": "^3.1.1",
+    "steal-tools": "^1.8.4"
+  },
+  "steal": {
+    "main": "index",
+    "plugins": [
+      "can"
+    ],
+    "map": {
+      "mootools/mootools": "mootools",
+      "mootools-more/mootools-more": "mootools-more"
+    },
+    "paths": {
+      "mootools": "MooTools-Core-1.6.0.js",
+      "mootools-more": "MooTools-More-1.6.0.js",
+      "steal/dev.js": "node_modules/can/lib/steal/dev/dev.js",
+      "can/util/util": "node_modules/can/util/mootools/mootools.js"
+    },
+    "meta": {
+      "mootools": {
+        "format": "global",
+        "scriptEval": true
+      },
+      "mootools-more": {
+        "format": "global",
+        "deps": [
+          "mootools"
+        ],
+        "scriptEval": true
+      }
+    }
+  }
+}
